@@ -80,7 +80,12 @@ else
 
     inherit version debugInfo;
 
-    nativeBuildInputs = [ makeWrapper ];
+    strictDeps = true;
+
+    nativeBuildInputs = [
+      erlang
+      makeWrapper
+    ];
     buildInputs = [ erlang ];
 
     env = {
